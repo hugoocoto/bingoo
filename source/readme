@@ -1,0 +1,16 @@
+                                     BINGOO
+
+ABOUT
+    Graphically improved tui bingo game. You can't play, but you can enjoy
+    seeing the machine play.
+
+SOURCE CODE
+    Comdis p1. See LICENSE before read the code. Thanks. The last field is not a
+    prank. 
+
+RUN
+    run `make run`. It depends on kitty. You can run the client manually or
+    change the term in the script.
+
+LICENSE
+    see LICENSE
