@@ -1,5 +1,7 @@
 // Licensed under Hugo's GIBNC License 1.0 (2025) – must include full license and credit "Hugo Coto" if shared.
 
+package source;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -65,13 +67,14 @@ public class Card {
         }
     }
 
-    public void check(Integer num) {
+    public Boolean check(Integer num) {
         for (NState o : card) {
             if (o.num.equals(num)) {
                 o.state = true;
-                break;
+                return true;
             }
         }
+        return false;
     }
 
     public Boolean bingo() {
