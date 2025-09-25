@@ -1,6 +1,10 @@
 // Licensed under Hugo's GIBNC License 1.0 (2025) – must include full license and credit "Hugo Coto" if shared.
 
+import java.util.Random;
+
 public class Client extends Thread {
+
+    private Card card;
 
     public Client() {
         super();
@@ -8,7 +12,20 @@ public class Client extends Thread {
 
     @Override
     public void run() {
-        System.out.println("Hello I'm a Client");
+        card = new Card();
+        Random r = new Random();
+        card.print();
+        for (int i = 0; i < 1000; i++) {
+            try {
+                sleep(100);
+            } catch (InterruptedException e) {
+            }
+
+            card.check(r.nextInt(75));
+            card.print();
+
+            if (card.bingo()) System.exit(0);
+        }
     }
 
 }

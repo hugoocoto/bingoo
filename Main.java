@@ -14,8 +14,6 @@ public class Main {
         init = true;
         System.out.println("This should be a bingo");
         createClient();
-        createClient();
-        createClient();
         startGame();
         waitEndGame();
     }
